@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+body[data-theme=dark] {
+  background-color: #000;
+  color: white;
+}
+body[data-theme=dark] .switch-color {
+  border-color: white;
+}
+body[data-theme=dark] .switch-color .dot {
+  background: white;
+  transform: translateX(50px);
+}
+body[data-theme=dark] .github {
+  border-color: white;
+  color: white;
+}
+body[data-theme=dark] .github:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+body[data-theme=dark] .github img {
+  filter: invert(1);
+}
+body[data-theme=dark] .panel {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+body[data-theme=dark] .lorem {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+body[data-theme=light] {
+  background-color: #fff;
+  color: black;
+}
+body[data-theme=light] .switch-color {
+  border-color: black;
+}
+body[data-theme=light] .switch-color .dot {
+  background: black;
+  transform: translateX(0);
+}
+body[data-theme=light] .github {
+  border-color: black;
+  color: black;
+}
+body[data-theme=light] .github:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+body[data-theme=light] .github img {
+  filter: invert(0);
+}
+body[data-theme=light] .panel {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+body[data-theme=light] .lorem {
+  background: rgba(0, 0, 0, 0.1);
+  color: black;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  justify-content: end;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+header .switch-color {
+  border: 2px solid;
+  width: 90px;
+  height: 40px;
+  background: none;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+header .switch-color .dot {
+  width: 30px;
+  height: 30px;
+  background: rgb(85, 85, 85);
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+  width: 100%;
+}
+main h1 {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 4.2rem;
+  font-style: italic;
+}
+main .panel {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 5px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+main .panel .name::after {
+  padding-left: 20px;
+  content: "pawlowskimichal.pl";
+}
+main .panel .name::before {
+  padding-right: 20px;
+  content: "pawlowskimichal.pl";
+}
+main .panel a {
+  margin: 0 10px;
+  animation: moveText 3s linear infinite;
+}
+main .lorem {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 15px;
+  width: 90%;
+  border-radius: 20px;
+  max-width: 450px;
+  font-size: 20px;
+}
+main .github {
+  background: none;
+  border: 2px solid;
+  padding: 5px 10px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+main .github:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+main .github img {
+  filter: invert(1);
+  margin-right: 10px;
+}
+main a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+footer p {
+  margin: 10px;
+}
+
+@keyframes moveText {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}/*# sourceMappingURL=style.css.map */
